@@ -1,0 +1,340 @@
+.page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #191919;
+}
+
+.background {
+  position: absolute;
+  inset: 64px -94px 0;
+  z-index: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* ── Minimal site header ── */
+
+.header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 8px 32px 0;
+  background-color: #191919;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
+
+  img {
+    height: auto;
+    display: block;
+  }
+}
+
+.logoMark {
+  width: 17px;
+  height: 24px;
+}
+
+.logoType {
+  height: 18px;
+}
+
+.headerLink {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ccc;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+
+  &:hover {
+    color: white;
+  }
+}
+
+/* ── Content layout ── */
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1312px;
+  min-height: calc(100vh - 57px);
+  margin: 0 auto;
+  padding: 64px 32px 48px;
+}
+
+.heroText {
+  font-family: "PolySans", sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1;
+  color: white;
+  width: 550px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+/* ── Sign-in card ── */
+
+.card {
+  width: 500px;
+  flex-shrink: 0;
+  background-color: white;
+  border: 1px solid #191919;
+  border-radius: 4px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cardHeading {
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1;
+  color: #191919;
+  text-align: center;
+}
+
+/* ── Social buttons ── */
+
+.socialButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.socialButton {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 48px;
+  padding: 8px 24px;
+  border: 1px solid #191919;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+  }
+}
+
+.socialIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialLabel {
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+  white-space: nowrap;
+}
+
+/* ── "or" divider ── */
+
+.orDivider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.orLine {
+  flex: 1;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+.orText {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.24px;
+  color: #707070;
+  flex-shrink: 0;
+}
+
+/* ── Form fields ── */
+
+.formFields {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fieldLabelRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.fieldLabel {
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+}
+
+.fieldAction {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.input {
+  all: unset;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid #949494;
+  border-radius: 4px;
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #191919;
+  background-color: white;
+  transition: border-color 0.15s ease;
+
+  &:hover {
+    border-color: #707070;
+  }
+
+  &:focus {
+    border-color: #191919;
+  }
+
+  &::placeholder {
+    color: #aaa;
+  }
+}
+
+/* ── Sign in button ── */
+
+.signInButton {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  border-radius: 4px;
+  background-color: #9cee69;
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: #8cde59;
+  }
+
+  &:active {
+    background-color: #7cce49;
+  }
+}
+
+/* ── Footer area ── */
+
+.cardFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.createLink {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #707070;
+  text-align: center;
+
+  a {
+    color: #191919;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+.legalText {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #707070;
+
+  a {
+    color: #707070;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: #191919;
+    }
+  }
+}

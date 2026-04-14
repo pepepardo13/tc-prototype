@@ -1,0 +1,412 @@
+.page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #191919;
+}
+
+/* ── Background image ── */
+
+.background {
+  position: absolute;
+  inset: 64px -94px 0;
+  z-index: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* ── Minimal site header ── */
+
+.header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 8px 32px 0;
+  background-color: #191919;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
+
+  img {
+    height: auto;
+    display: block;
+  }
+}
+
+.logoMark {
+  width: 17px;
+  height: 24px;
+}
+
+.logoType {
+  height: 18px;
+}
+
+.headerSignIn {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ccc;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+
+  &:hover {
+    color: white;
+  }
+}
+
+/* ── Main content area ── */
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1312px;
+  min-height: calc(100vh - 57px);
+  margin: 0 auto;
+  padding: 32px 32px 48px;
+}
+
+.heroText {
+  font-family: "PolySansWide", sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1;
+  color: white;
+  width: 550px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+/* ── Sign-up card ── */
+
+.card {
+  width: 500px;
+  flex-shrink: 0;
+  background-color: white;
+  border: 1px solid #191919;
+  border-radius: 4px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.cardHeading {
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1;
+  color: #191919;
+  text-align: center;
+}
+
+/* ── USP list ── */
+
+.uspList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.uspItem {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.uspIcon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.uspText {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+}
+
+/* ── Social buttons ── */
+
+.socialButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.socialButton {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 48px;
+  padding: 8px 24px;
+  border: 1px solid #191919;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+  }
+}
+
+.socialIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialLabel {
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+  white-space: nowrap;
+}
+
+/* ── Checkbox row ── */
+
+.checkboxSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkboxEmpty {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid #191919;
+  background-color: white;
+}
+
+.checkboxLabel {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+}
+
+.checkboxHint {
+  padding-left: 32px;
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #707070;
+}
+
+/* ── Back button ── */
+
+.backButton {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+
+  &:hover {
+    border-color: #191919;
+    background-color: #f5f5f5;
+  }
+}
+
+/* ── Email form ── */
+
+.emailForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nameRow {
+  display: flex;
+  gap: 16px;
+
+  .fieldGroup {
+    flex: 1;
+  }
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fieldLabel {
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #191919;
+}
+
+.input {
+  all: unset;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+  background-color: white;
+  transition: border-color 0.15s ease;
+
+  &:hover {
+    border-color: #999;
+  }
+
+  &:focus {
+    border-color: #191919;
+  }
+
+  &::placeholder {
+    color: #aaa;
+  }
+}
+
+.fieldHint {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #707070;
+}
+
+/* ── Create account button ── */
+
+.createButton {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  border-radius: 4px;
+  background-color: #6bcc36;
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: #5fb82e;
+  }
+
+  &:active {
+    background-color: #54a528;
+  }
+}
+
+/* ── Footer area ── */
+
+.cardFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.signInLink {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #707070;
+  text-align: center;
+
+  a {
+    color: #191919;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+.legalText {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #707070;
+
+  a {
+    color: #707070;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: #191919;
+    }
+  }
+}

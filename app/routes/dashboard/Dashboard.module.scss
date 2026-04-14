@@ -1,0 +1,847 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff5ed;
+  color: #191919;
+  font-family: "PolySans", sans-serif;
+}
+
+/* ── Site header ── */
+
+.siteHeader {
+  background-color: #fff5ed;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 0 24px 0 32px;
+  gap: 24px;
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  height: 24px;
+  overflow: hidden;
+}
+
+.navLogoMark {
+  width: 17px;
+  height: 24px;
+}
+
+.navLogoType {
+  height: 18px;
+}
+
+.navTabs {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+  height: 56px;
+  overflow: hidden;
+}
+
+.navTab {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #707070;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: #191919;
+  }
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-right: 8px;
+}
+
+.navLink {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #707070;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: #191919;
+  }
+}
+
+.navCtaWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+}
+
+.navCta {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 4px;
+  background-color: #9cee69;
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.28px;
+  color: #1a4200;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: #8cde59;
+  }
+}
+
+.navAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  cursor: pointer;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* ── Search bar ── */
+
+.searchBarWrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 64px;
+  padding: 0 32px 8px;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 1100px;
+  min-width: 400px;
+  min-height: 48px;
+  padding: 4px 16px 4px 24px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 48px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.06);
+}
+
+.searchDropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.searchDropdownLabel {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #191919;
+  white-space: nowrap;
+}
+
+.searchDropdownChevron {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.searchSeparator {
+  width: 1px;
+  height: 32px;
+  background-color: #ccc;
+  flex-shrink: 0;
+}
+
+.searchInputArea {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.searchIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: #191919;
+}
+
+.searchInput {
+  all: unset;
+  box-sizing: border-box;
+  flex: 1;
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #191919;
+
+  &::placeholder {
+    color: #707070;
+  }
+}
+
+.aiButton {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}
+
+/* ── Welcome section ── */
+
+.welcomeSection {
+  position: relative;
+  padding: 40px 32px 0;
+}
+
+.welcomeTitle {
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1;
+  color: #191919;
+  margin-bottom: 40px;
+}
+
+/* ── Main content card ── */
+
+.mainContent {
+  background-color: white;
+  border-radius: 16px;
+  padding: 40px 32px;
+  margin: 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  overflow: hidden;
+}
+
+/* ── Promotion modules ── */
+
+.promoRow {
+  display: flex;
+  gap: 8px;
+}
+
+.promoModule {
+  flex: 1;
+  display: flex;
+  height: 300px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff5ed;
+}
+
+.promoContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+.promoTitle {
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1;
+  color: #191919;
+  margin-bottom: 16px;
+}
+
+.promoBody {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+}
+
+.promoButton {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 24px;
+  border: 1px solid #191919;
+  border-radius: 4px;
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  align-self: flex-start;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.promoImage {
+  flex: 1;
+  position: relative;
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* ── Section header (ItemBlockHeader) ── */
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+.sectionTitleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sectionTitle {
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1;
+  color: #191919;
+}
+
+.sectionSubtitle {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+}
+
+.sectionAction {
+  all: unset;
+  box-sizing: border-box;
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+  cursor: pointer;
+  padding: 12px 0;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* ── Category carousel ── */
+
+.categoryRow {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.categoryTile {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  cursor: pointer;
+}
+
+.categoryImage {
+  width: 206px;
+  height: 206px;
+  border-radius: 0;
+  overflow: hidden;
+  background-color: #f9f9fb;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.categoryLabel {
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+  padding-top: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 206px;
+}
+
+/* ── Asset grid ── */
+
+.assetGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.assetCard {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.assetImage {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  background-color: #f9f9fb;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* ── Top picks ── */
+
+.picksGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.pickCard {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.pickImage {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  background-color: #f9f9fb;
+  border-radius: 0;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* ── Author section ── */
+
+.authorRow {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.authorCard {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.authorAvatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f9f9fb;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.authorName {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #191919;
+  text-align: center;
+}
+
+/* ── Footer ── */
+
+.footer {
+  background-color: #fff5ed;
+  padding: 64px 32px 40px;
+}
+
+.footerColumns {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+.footerCol {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footerGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footerGroupTitle {
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+}
+
+.footerLink {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footerDivider {
+  width: 100%;
+  height: 1px;
+  background-color: #d9d9d9;
+  margin-bottom: 40px;
+}
+
+.footerBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerBottomLeft {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.footerBcorp {
+  width: 66px;
+  height: 96px;
+}
+
+.footerBottomLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footerProductLinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+}
+
+.footerCopyright {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #707070;
+}
+
+.footerLanguage {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 0;
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+  cursor: pointer;
+}
+
+.footerLogoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footerLogo {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.footerSocials {
+  display: flex;
+  gap: 0;
+}
+
+.footerSocialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.15s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+/* ── Modal overlay ── */
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  width: 700px;
+  max-width: calc(100vw - 64px);
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.modalHeader {
+  padding: 24px 24px 0 40px;
+}
+
+.modalTitle {
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1;
+  color: #191919;
+  padding-top: 16px;
+}
+
+.modalContent {
+  padding: 24px 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modalBody {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+
+  a {
+    color: #191919;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.modalCheckbox {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.checkboxBox {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border: 1px solid #191919;
+  border-radius: 4px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.checkboxBoxChecked {
+  composes: checkboxBox;
+  background-color: #191919;
+}
+
+.checkboxCheck {
+  width: 14px;
+  height: 14px;
+  color: white;
+}
+
+.checkboxLabel {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+}
+
+.modalFooter {
+  padding: 24px 40px 40px;
+}
+
+.modalSaveButton {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 4px;
+  background-color: #87e64b;
+  font-family: "PolySans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1a4200;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+
+  &:hover {
+    background-color: #7ad63e;
+  }
+
+  &:active {
+    background-color: #6ec632;
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    color: #707070;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+}
