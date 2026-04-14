@@ -9,7 +9,7 @@ import { Hub } from "./Hub.tsx";
  * journey to explore: creating a new account or signing into an existing one.
  */
 const meta = {
-  title: "T&C / Hub",
+  title: "Routes/Hub",
   component: Hub,
   parameters: {
     layout: "fullscreen",

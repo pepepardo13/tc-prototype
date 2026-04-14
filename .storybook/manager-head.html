@@ -1,0 +1,7 @@
+<script>
+  // Redirect to chromeless story view when landing on the Storybook manager
+  if (window.top === window.self) {
+    var base = window.location.pathname.replace(/\/+$/, '');
+    window.location.replace(base + '/iframe.html?id=routes-hub--default&viewMode=story');
+  }
+</script>
