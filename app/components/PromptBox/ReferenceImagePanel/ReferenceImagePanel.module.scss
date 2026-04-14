@@ -1,0 +1,19 @@
+.referencePanel {
+  max-height: 80dvh;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-border-secondary);
+    border-radius: var(--roundness-subtle);
+  }
+}
+
+.dropzoneGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-3x);
+}

@@ -1,0 +1,15 @@
+// Gradient overlay for label readability (design system has no equivalent)
+.labelOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.2),
+    transparent
+  );
+  pointer-events: none;
+}

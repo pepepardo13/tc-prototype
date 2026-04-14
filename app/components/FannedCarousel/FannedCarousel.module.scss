@@ -1,0 +1,82 @@
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -100px;
+  margin-top: -100px;
+  border-radius: var(--roundness-3x);
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--logo-logo-green, #87e64b);
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.38);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+
+  .card:hover &,
+  .card:focus-visible & {
+    opacity: 1;
+  }
+}
+
+.promptButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 3px 16px;
+  background: rgba(25, 25, 25, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 50px;
+  color: white;
+  font-size: 13px;
+  line-height: 1.5;
+  border: none;
+  cursor: pointer;
+  transform: translateY(8px);
+  opacity: 0;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+
+  .card:hover &,
+  .card:focus-visible & {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

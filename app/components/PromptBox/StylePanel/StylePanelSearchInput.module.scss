@@ -1,0 +1,10 @@
+// Escape hatch: vertical centering and mobile hide for keyboard shortcut badge
+// (design system has no equivalent)
+.keyboardShortcut {
+  @media (max-width: 699px) {
+    display: none !important;
+  }
+
+  top: 50%;
+  transform: translate(-20%, -50%);
+}

@@ -1,0 +1,9 @@
+.root {
+  cursor: inherit;
+  height: var(--h);
+
+  @container (inline-size >= 700px) {
+    cursor: var(--c);
+    height: 100dvh;
+  }
+}

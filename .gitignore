@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Storybook build output
+storybook-static/
+
+# Vite / Storybook cache
+node_modules/.cache/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+*.local

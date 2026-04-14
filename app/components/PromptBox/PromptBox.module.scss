@@ -1,0 +1,20 @@
+.contentEditable {
+  resize: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  min-height: 1.5em;
+
+  &:empty::before {
+    content: attr(data-placeholder);
+    color: var(--color-text-primary);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  &:focus::before {
+    display: none;
+  }
+}
+
+.background {
+  background-image: var(--color-gradient-glass);
+}

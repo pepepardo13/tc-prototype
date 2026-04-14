@@ -1,0 +1,17 @@
+// Show hamburger icon or clear icon when drawer is closed or open
+
+.hamburger-button[aria-expanded="false"] .icon-hamburger {
+  display: block;
+}
+
+.hamburger-button[aria-expanded="false"] .icon-clear {
+  display: none;
+}
+
+.hamburger-button[aria-expanded="true"] .icon-hamburger {
+  display: none;
+}
+
+.hamburger-button[aria-expanded="true"] .icon-clear {
+  display: block;
+}

@@ -1,0 +1,27 @@
+.grid {
+  container-type: inline-size;
+  display: grid;
+  gap: var(--spacing-3x);
+  grid-template-columns: 1fr;
+  width: 100%;
+
+  /* 2 columns when container is >= 500px */
+  @container (inline-size >= 500px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* 3 columns when container is >= 800px */
+  @container (inline-size >= 800px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.item {
+  aspect-ratio: var(--ar);
+  display: block;
+  min-height: 250px;
+  min-width: 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}

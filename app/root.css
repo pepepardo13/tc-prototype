@@ -1,0 +1,195 @@
+@import "@envato/design-system/reset.css";
+@import "@envato/design-system/base.css";
+@import "@envato/design-system/envato-app.css";
+
+@font-face {
+  font-family: "PolySans";
+  font-weight: 400;
+  font-display: swap;
+  src: url("@envato/design-system/assets/PolySansEnvato-Neutral.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "PolySans";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("@envato/design-system/assets/PolySansEnvato-NeutralItalic.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "PolySans";
+  font-weight: 600;
+  font-display: swap;
+  src: url("@envato/design-system/assets/PolySansEnvato-Median.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "PolySans";
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+  src: url("@envato/design-system/assets/PolySansEnvato-MedianItalic.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "PolySans";
+  font-weight: 700;
+  font-display: swap;
+  src: url("@envato/design-system/assets/PolySansEnvato-Median.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "PolySans";
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url("@envato/design-system/assets/PolySansEnvato-MedianItalic.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "PolySansWide";
+  font-weight: 700;
+  font-display: swap;
+  src: url("@envato/design-system/assets/PolySansEnvato-Bulky.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "PolySansWide";
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url("@envato/design-system/assets/PolySansEnvato-BulkyItalic.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "PolySansMono";
+  font-weight: 400;
+  font-display: swap;
+  src: url("@envato/design-system/assets/PolySansEnvato-NeutralMono.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "PolySansMono";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("@envato/design-system/assets/PolySansEnvato-NeutralMonoItalic.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "PolySansMono";
+  font-weight: 600;
+  font-display: swap;
+  src: url("@envato/design-system/assets/PolySansEnvato-MedianMono.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "PolySansMono";
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+  src: url("@envato/design-system/assets/PolySansEnvato-MedianMonoItalic.woff2")
+    format("woff2");
+}
+
+/* Loading animation for image placeholders */
+@keyframes noise {
+  0% {
+    background-position:
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%;
+    filter: contrast(1.1) brightness(0.8) hue-rotate(0deg);
+  }
+  25% {
+    background-position:
+      5% 15%,
+      10% 20%,
+      8% 10%,
+      0% 5%,
+      0% 8%;
+    filter: contrast(1.2) brightness(0.9) hue-rotate(1deg);
+  }
+  50% {
+    background-position:
+      10% 30%,
+      20% 40%,
+      15% 25%,
+      0% 10%,
+      0% 15%;
+    filter: contrast(1) brightness(0.7) hue-rotate(2deg);
+  }
+  75% {
+    background-position:
+      15% 45%,
+      30% 60%,
+      25% 40%,
+      0% 15%,
+      0% 25%;
+    filter: contrast(1.3) brightness(0.95) hue-rotate(1deg);
+  }
+  100% {
+    background-position:
+      20% 60%,
+      40% 80%,
+      30% 50%,
+      0% 20%,
+      0% 30%;
+    filter: contrast(1.1) brightness(0.8) hue-rotate(0deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+:root {
+  @media (hover: hover) {
+    --min-touch-area: 40px;
+  }
+
+  scrollbar-gutter: stable;
+}
+
+/** Temporarily override until absorbed into envato-app theme CSS. */
+body {
+  overflow-x: clip;
+}
+
+body.ds-color-scheme-light {
+  color-scheme: light;
+}
+
+body.ds-color-scheme-dark {
+  color-scheme: dark;
+}
+
+/* Prevent body scroll when drawers or panels are open. */
+body[data-details-panel-open],
+body[data-drawer-open],
+body[data-filters-panel-open] {
+  overflow: clip;
+}
+
+body {
+  background-color: var(--color-surface-background);
+}

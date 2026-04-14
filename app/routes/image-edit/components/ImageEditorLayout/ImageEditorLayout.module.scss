@@ -1,0 +1,7 @@
+.maxHeight {
+  max-height: calc(100dvh - 56px);
+
+  @container root (inline-size >= 700px) {
+    max-height: 100dvh;
+  }
+}

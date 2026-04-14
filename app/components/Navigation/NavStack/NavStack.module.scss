@@ -1,0 +1,20 @@
+.padding {
+  transition-property: padding;
+}
+
+.noScrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.noScrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.width {
+  width: 100%;
+
+  @container (inline-size >= 700px) {
+    width: var(--w);
+  }
+}

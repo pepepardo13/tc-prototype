@@ -1,0 +1,11 @@
+// Background pattern for the editor viewport
+.container {
+  user-select: none;
+  touch-action: none;
+  background-image: radial-gradient(
+    circle,
+    var(--color-border-secondary) 1px,
+    transparent 1px
+  );
+  background-size: var(--spacing-4x) var(--spacing-4x);
+}

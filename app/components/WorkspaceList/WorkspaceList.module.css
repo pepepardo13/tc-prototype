@@ -1,0 +1,9 @@
+.workspace-list-scrollbar-hidden {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.workspace-list-scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}

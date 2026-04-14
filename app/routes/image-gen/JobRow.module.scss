@@ -1,0 +1,24 @@
+.container {
+  container-type: inline-size;
+  display: grid;
+  gap: var(--spacing-4x);
+  grid-template-columns: 1fr;
+  width: 100%;
+
+  @container (inline-size >= 800px) {
+    grid-template-columns: 1fr 280px;
+  }
+}
+
+.gridContainer {
+  container-type: inline-size;
+  width: 100%;
+}
+
+.detailsPanel {
+  display: none;
+
+  @container (inline-size >= 800px) {
+    display: block;
+  }
+}

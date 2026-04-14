@@ -1,0 +1,157 @@
+.musicGrid {
+  display: grid;
+  row-gap: var(--spacing-1x);
+  width: 100%;
+  height: 100%;
+
+  /* Mobile: 2 columns with named lines */
+  grid-template-columns: [play] auto [title] 1fr;
+
+  @container (inline-size >= 700px) {
+    /* Desktop: 8 columns with named lines */
+    grid-template-columns:
+      [play] auto
+      [title] minmax(200px, 1fr)
+      [claim-clear] 24px
+      [variants] 72px
+      [waveform] minmax(0, 3fr)
+      [duration] auto
+      [bpm] 85px
+      [actions] auto;
+  }
+}
+
+.musicTrackRow {
+  display: grid;
+  grid-column: 1 / -1;
+  gap: var(--spacing-3x);
+  align-items: center;
+  grid-template-columns: subgrid;
+}
+
+.soundEffectGrid {
+  display: grid;
+  gap: var(--spacing-3x);
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  /* Mobile: 2 columns with named lines */
+  grid-template-columns: [play] auto [title] 1fr;
+
+  @container (inline-size >= 700px) {
+    /* Desktop: 5 columns with named lines */
+    grid-template-columns:
+      [play] auto
+      [title] minmax(200px, 1fr)
+      [waveform] minmax(0, 3fr)
+      [clips] 65px
+      [actions] auto;
+  }
+}
+
+/* Common grid item positioning - using named lines */
+.gridItemPlay {
+  grid-column: play;
+}
+
+.gridItemTitle {
+  min-width: 0;
+  grid-column: title;
+  grid-row: 1;
+
+  @container (inline-size >= 700px) {
+    max-width: 320px;
+  }
+}
+
+.gridItemWaveform {
+  min-width: 0;
+  grid-column: 1 / -1;
+
+  @container (inline-size >= 700px) {
+    grid-column: waveform;
+  }
+}
+
+/* Music-specific - using named lines */
+.gridItemClaimClear {
+  display: flex;
+  /* Mobile: share title column, align bottom-right to avoid overlapping long titles */
+  grid-column: title;
+  grid-row: 1;
+  justify-self: end;
+  align-self: end;
+  padding-right: var(--spacing-6x); /* Space for checkbox in selection mode */
+
+  @container (inline-size >= 700px) {
+    /* Desktop: dedicated column, centered */
+    grid-column: claim-clear;
+    align-self: center;
+    padding-right: 0; /* Remove padding in desktop layout */
+  }
+}
+
+.gridItemVariants {
+  display: none;
+
+  @container (inline-size >= 700px) {
+    display: flex;
+    grid-column: variants;
+    justify-content: flex-end;
+  }
+}
+
+.gridItemDuration {
+  grid-column: play;
+
+  @container (inline-size >= 700px) {
+    grid-column: duration;
+  }
+}
+
+.gridItemBpm {
+  display: none;
+
+  @container (inline-size >= 700px) {
+    display: block;
+    grid-column: bpm;
+  }
+}
+
+.musicGridItemActions {
+  justify-self: end;
+  grid-column: title;
+
+  @container (inline-size >= 700px) {
+    grid-column: actions;
+  }
+}
+
+/* Sound Effect-specific - using named lines */
+.gridItemClips {
+  grid-column: play;
+
+  @container (inline-size >= 700px) {
+    grid-column: clips;
+    text-align: right;
+  }
+}
+
+.soundEffectGridItemActions {
+  justify-self: end;
+  grid-column: title;
+
+  @container (inline-size >= 700px) {
+    grid-column: actions;
+  }
+}
+
+/* Track variant row - uses subgrid to align with parent */
+.trackVariantRow {
+  display: grid;
+  grid-column: 1 / -1;
+  gap: var(--spacing-3x);
+  align-items: center;
+  grid-template-columns: subgrid;
+}

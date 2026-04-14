@@ -1,0 +1,11 @@
+.glass {
+  background-image: var(--color-gradient-glass);
+}
+
+.actionsPanelTrigger {
+  display: block;
+
+  @container root (inline-size >= 700px) {
+    display: none;
+  }
+}

@@ -1,0 +1,40 @@
+/**
+ * UserUpload Component Styles
+ * 
+ * Minimal CSS for features not fully supported by the design system:
+ * - Dashed border style (borderStyle only supports 'solid', 'none', 'hidden')
+ * 
+ * All other styling (height, width, layout) is handled by design system Box component props.
+ */
+
+/**
+ * Dashed border style for dropzone (not supported by design system borderStyle prop)
+ */
+.dropzoneBorder {
+  border-style: dashed;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+
+  &.dragOver {
+    border-style: solid;
+    border-color: var(--color-border-accent);
+    background-color: var(--color-surface-accent-subtle);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+  }
+}
+
+/**
+ * Hide native file input
+ */
+.hidden {
+  display: none;
+}
+
+input[type="file"] {
+  display: none;
+}

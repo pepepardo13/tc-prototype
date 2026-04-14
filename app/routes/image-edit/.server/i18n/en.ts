@@ -1,0 +1,47 @@
+export const en = {
+  "imageEdit.title": "Image Editing",
+  "imageEdit.description": "Edit and enhance images with AI-powered tools",
+  "imageEdit.landing.title": "Image Editing",
+  "imageEdit.landing.recent": "Recent Sessions",
+  "imageEdit.landing.empty": "No recent editing sessions",
+  "imageEdit.upload.dropzone": "Upload an image to start editing",
+  "imageEdit.upload.supported": "Supports JPEG, PNG, WebP",
+  "imageEdit.back": "Back",
+  "imageEdit.cancel": "Cancel",
+  "imageEdit.reset": "Reset",
+  "imageEdit.done": "Done",
+  "imageEdit.history": "History",
+  "imageEdit.session.new": "New",
+  "imageEdit.errors.invalid_operation": "Invalid operation",
+  "imageEdit.errors.source_image_required": "Source image is required",
+  "imageEdit.errors.source_image_missing_fields":
+    "Source image is missing source or id",
+  "imageEdit.errors.source_image_not_found":
+    "Source image not found or expired",
+
+  "imageEdit.action.cameraAngle": "Camera angle",
+  "imageEdit.action.cameraAngle.pitch": "Pitch",
+  "imageEdit.action.cameraAngle.yaw": "Yaw",
+  "imageEdit.action.cameraAngle.yaw.value": "Yaw {yaw}",
+  "imageEdit.action.cameraAngle.zoom": "Zoom",
+  "imageEdit.action.cameraAngle.zoom.value": "Zoom {zoom}",
+  "imageEdit.action.createVideo": "Create video",
+  "imageEdit.action.crop": "Crop",
+  "imageEdit.action.crop.aspectRatio.free": "Free",
+  "imageEdit.action.crop.aspectRatio.original": "Original",
+  "imageEdit.action.crop.aspectRatio.square": "Square",
+  "imageEdit.action.expand": "Expand",
+  "imageEdit.action.expand.done": "Expand & fill",
+  "imageEdit.action.removeBackground": "Remove background",
+  "imageEdit.action.upscale": "Upscale",
+
+  "imageEdit.tool.actionsPanel": "Tools",
+  "imageEdit.tool.brush": "Brush tool",
+  "imageEdit.tool.brushSize.small": "Small brush",
+  "imageEdit.tool.brushSize.medium": "Medium brush",
+  "imageEdit.tool.brushSize.large": "Large brush",
+  "imageEdit.tool.eraser": "Eraser",
+  "imageEdit.tool.pan": "Pan tool",
+};
+
+export type Translations = typeof en;

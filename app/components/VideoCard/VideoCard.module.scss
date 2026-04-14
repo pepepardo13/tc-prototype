@@ -1,0 +1,595 @@
+.card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-family: "PolySans", sans-serif;
+}
+
+/* ── Video thumbnail card ───────────────────────────────── */
+
+.videoCard {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: var(--color-surface-elevated-1x);
+  display: flex;
+  flex-direction: column;
+}
+
+.videoCard--compact {
+  width: 400px;
+}
+
+.videoCard--wide {
+  width: 852px;
+}
+
+.videoCard--noRound {
+  border-radius: 0;
+}
+
+.thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--color-surface-tertiary);
+  flex-shrink: 0;
+}
+
+.thumbnail--square {
+  aspect-ratio: 1 / 1;
+}
+
+.thumbnailImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumbnailPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-content-secondary);
+  font-size: 18px;
+  font-family: "PolySans Median", "PolySans", sans-serif;
+  font-weight: 600;
+}
+
+/* ── Overlays ──────────────────────────────────────────── */
+
+.titleOverlay {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  display: flex;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.titleBadge {
+  flex: 1;
+  min-width: 0;
+}
+
+.titleBadgeTitle {
+  background: rgba(25, 25, 25, 0.7);
+  padding: 0 4px;
+  border-radius: 3.8px 3.8px 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-family: "PolySans Median", "PolySans", sans-serif;
+  font-weight: 600;
+  color: white;
+  max-width: 140px;
+}
+
+.titleBadgeAuthor {
+  background: rgba(25, 25, 25, 0.7);
+  padding: 0 4px;
+  border-radius: 0 0 3.8px 3.8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-family: "PolySans Neutral", "PolySans", sans-serif;
+  color: white;
+  max-width: 140px;
+}
+
+.fullscreenButton {
+  background: rgba(25, 25, 25, 0.7);
+  padding: 4px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+.actionsOverlay {
+  position: absolute;
+  bottom: 12px;
+  right: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-end;
+}
+
+.overlayIconButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 48px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  flex-shrink: 0;
+}
+
+.durationBadge {
+  position: absolute;
+  bottom: 12px;
+  left: 8px;
+  background: rgba(25, 25, 25, 0.7);
+  border-radius: 4px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: white;
+  font-size: 14px;
+  font-family: "PolySans Neutral", "PolySans", sans-serif;
+}
+
+.scrubber {
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-surface-elevated-2x);
+}
+
+.scrubberProgress {
+  height: 100%;
+  background: var(--color-surface-elevated-1x);
+  width: 30%;
+}
+
+/* ── Pending state content (Generating / Queue / Failed) ── */
+
+.pendingContent {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px;
+}
+
+.sparkIcon {
+  width: 46px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.pendingText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  color: white;
+}
+
+.pendingTitle {
+  font-size: 24px;
+  font-family: "PolySans Median", "PolySans", sans-serif;
+  font-weight: 600;
+  line-height: 1;
+  margin: 0;
+}
+
+.pendingSubtitle {
+  font-size: 16px;
+  font-family: "PolySans Neutral", "PolySans", sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Side panel ────────────────────────────────────────── */
+
+.sidePanel {
+  width: 280px;
+  flex-shrink: 0;
+  background: var(--color-surface-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+  align-self: stretch;
+}
+
+.sidePanelInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 0;
+}
+
+.sidePanelTop {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.promptLabel {
+  font-size: 12px;
+  font-family: "PolySans Neutral", "PolySans", sans-serif;
+  color: var(--color-content-secondary);
+  margin: 0;
+}
+
+.promptText {
+  font-size: 14px;
+  font-family: "PolySans Neutral", "PolySans", sans-serif;
+  color: var(--color-content-primary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.dateText {
+  font-size: 12px;
+  font-family: "PolySans Neutral", "PolySans", sans-serif;
+  color: var(--color-content-secondary);
+  margin: 0;
+}
+
+.termsText {
+  font-size: 12px;
+  font-family: "PolySans Neutral", "PolySans", sans-serif;
+  color: var(--color-content-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.termsLink {
+  color: var(--color-content-secondary);
+  text-decoration: underline;
+}
+
+.iconActions {
+  display: flex;
+  gap: 8px;
+}
+
+.ghostIconButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 48px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-content-secondary);
+}
+
+.ghostIconButton:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+/* ── Side panel action buttons ─────────────────────────── */
+
+.sidePanelActions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 8px;
+}
+
+.secondaryButton {
+  flex: 1;
+  height: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  border-radius: 48px;
+  background: rgba(255, 255, 255, 0.09);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "PolySans Neutral", "PolySans", sans-serif;
+  color: white;
+  white-space: nowrap;
+}
+
+.elevatedButton {
+  flex: 1;
+  height: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  border-radius: 48px;
+  background: var(--color-surface-elevated-2x, #383838);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "PolySans Neutral", "PolySans", sans-serif;
+  color: white;
+  white-space: nowrap;
+}
+
+.elevatedButton--full {
+  width: 100%;
+  flex: none;
+}
+
+.primaryButton {
+  width: 100%;
+  height: 40px;
+  min-height: 40px;
+  border-radius: 48px;
+  background: var(--color-surface-interactive-primary, #87e64b);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "PolySans Median", "PolySans", sans-serif;
+  font-weight: 600;
+  color: var(--color-content-interactive, #191919);
+  letter-spacing: 0.28px;
+}
+
+.primaryButton--large {
+  height: 48px;
+  min-height: 48px;
+  font-size: 16px;
+}
+
+.disabledButton {
+  width: 100%;
+  height: 40px;
+  min-height: 40px;
+  border-radius: 48px;
+  background: var(--color-surface-elevated-2x, #383838);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 16px;
+  cursor: not-allowed;
+  font-size: 14px;
+  font-family: "PolySans Neutral", "PolySans", sans-serif;
+  color: var(--color-content-disabled, #666);
+}
+
+.cancelButton {
+  height: 40px;
+  min-height: 40px;
+  border-radius: 48px;
+  background: rgba(255, 255, 255, 0.09);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "PolySans Neutral", "PolySans", sans-serif;
+  color: white;
+}
+
+/* ── Skeleton loading bars ─────────────────────────────── */
+
+.skeleton {
+  background: var(--color-surface-elevated-2x, #383838);
+  border-radius: 100px;
+  flex-shrink: 0;
+}
+
+.skeletonBars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* ── Delete modal overlay ──────────────────────────────── */
+
+.modalOverlay {
+  position: absolute;
+  top: 80px;
+  left: 68px;
+  right: 0;
+  z-index: 10;
+  width: 700px;
+  border-radius: 16px;
+  background: var(--color-surface-background, #191919);
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+}
+
+.modalHeader {
+  padding: 24px 24px 24px 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.modalHeaderContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.modalDangerIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  background: #77012d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.modalTitle {
+  font-size: 24px;
+  font-family: "PolySans Median", "PolySans", sans-serif;
+  font-weight: 600;
+  line-height: 1;
+  color: white;
+  padding-top: 16px;
+  margin: 0;
+}
+
+.modalCloseButton {
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  flex-shrink: 0;
+}
+
+.modalBody {
+  padding: 0 40px;
+  font-size: 16px;
+  font-family: "PolySans Neutral", "PolySans", sans-serif;
+  color: white;
+  line-height: 1.5;
+}
+
+.modalFooter {
+  padding: 24px 40px 40px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* ── Mobile play button ────────────────────────────────── */
+
+.playButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 48px;
+  background: rgba(25, 25, 25, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  flex-shrink: 0;
+}
+
+/* ── Mobile delete overlay ─────────────────────────────── */
+
+.mobileDeleteOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  border-radius: 16px;
+  background: rgba(25, 25, 25, 0.92);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.mobileDeleteTitle {
+  font-size: 16px;
+  font-family: "PolySans Median", "PolySans", sans-serif;
+  font-weight: 600;
+  color: white;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.mobileDeleteBody {
+  font-size: 14px;
+  font-family: "PolySans Neutral", "PolySans", sans-serif;
+  color: var(--color-content-secondary, #999);
+  margin: 0;
+}
+
+.mobileDeleteActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.primaryButton--danger {
+  background: #c0392b;
+  color: white;
+}
+
+/* ── Playing state scrubber bar ────────────────────────── */
+
+.playbackBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.playbackProgress {
+  height: 100%;
+  background: white;
+  width: 35%;
+  border-radius: 0 2px 2px 0;
+}

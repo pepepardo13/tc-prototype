@@ -1,0 +1,93 @@
+.panel {
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border-tertiary);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+}
+
+.panelLarge {
+  width: 280px;
+  height: 567px;
+}
+
+.panelMobile {
+  width: 100%;
+  max-width: 370px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contentLarge {
+  flex: 1 0 0;
+  min-height: 0;
+  justify-content: space-between;
+}
+
+.contentMobile {
+  gap: 16px;
+}
+
+.skeletonBar {
+  background-color: var(--color-surface-elevated-2x);
+  border-radius: 100px;
+  height: 18px;
+}
+
+.skeletonBarShort {
+  width: 98px;
+}
+
+.iconPlaceholder {
+  width: 38px;
+  height: 38px;
+  border-radius: 100px;
+  background: var(--color-surface-tertiary);
+  backdrop-filter: blur(5px);
+  flex-shrink: 0;
+}
+
+.closeButton {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  z-index: 1;
+}
+
+.termsLink {
+  color: var(--color-content-secondary);
+  text-decoration: underline;
+}
+
+.actionsRow {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.actionsRowButton {
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.skeletonButton {
+  background: var(--color-surface-elevated-2x);
+  border-radius: 48px;
+  width: 100%;
+}
+
+.skeletonButtonMedium {
+  height: 40px;
+}
+
+.skeletonButtonSmall {
+  height: 32px;
+}

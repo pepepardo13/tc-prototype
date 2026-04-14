@@ -1,0 +1,22 @@
+// Escape hatch: panel height and scrollable flex (design system has no equivalent)
+.panel {
+  max-height: 80dvh;
+}
+
+.scrollableBody {
+  flex: 1;
+  min-height: 0;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-border-secondary);
+    border-radius: var(--roundness-subtle);
+  }
+}

@@ -1,0 +1,7 @@
+.width {
+  width: 100%;
+
+  @container (inline-size >= 700px) {
+    width: var(--w);
+  }
+}
