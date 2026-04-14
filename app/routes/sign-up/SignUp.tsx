@@ -96,7 +96,7 @@ export function SignUp({ onSignIn, onComplete }: SignUpProps) {
           </div>
 
           {step === "social" ? (
-            <SocialStep onEmailClick={() => setStep("email")} />
+            <SocialStep onEmailClick={() => setStep("email")} onSocialLogin={onComplete} />
           ) : (
             <EmailFormStep onBack={() => setStep("social")} />
           )}
@@ -141,18 +141,18 @@ export function SignUp({ onSignIn, onComplete }: SignUpProps) {
   );
 }
 
-function SocialStep({ onEmailClick }: { onEmailClick: () => void }) {
+function SocialStep({ onEmailClick, onSocialLogin }: { onEmailClick: () => void; onSocialLogin?: () => void }) {
   return (
     <div className={styles.socialButtons}>
-      <button type="button" className={styles.socialButton}>
+      <button type="button" className={styles.socialButton} onClick={onSocialLogin}>
         <span className={styles.socialIcon}><GoogleIcon /></span>
         <span className={styles.socialLabel}>Continue with Google</span>
       </button>
-      <button type="button" className={styles.socialButton}>
+      <button type="button" className={styles.socialButton} onClick={onSocialLogin}>
         <span className={styles.socialIcon}><AppleIcon /></span>
         <span className={styles.socialLabel}>Continue with Apple</span>
       </button>
-      <button type="button" className={styles.socialButton}>
+      <button type="button" className={styles.socialButton} onClick={onSocialLogin}>
         <span className={styles.socialIcon}><FacebookIcon /></span>
         <span className={styles.socialLabel}>Continue with Facebook</span>
       </button>
