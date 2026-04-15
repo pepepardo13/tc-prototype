@@ -1,13 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Bleed } from "@envato/design-system/components";
-
 import { Hub } from "./Hub.tsx";
 
-/**
- * The Hub is the entry point for the T&C prototype. Users pick which
- * journey to explore: creating a new account or signing into an existing one.
- */
 const meta = {
   title: "Routes/Hub",
   component: Hub,
@@ -19,9 +13,9 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <Bleed uniform="3x">
+      <div style={{ position: "fixed", inset: 0 }}>
         <Story />
-      </Bleed>
+      </div>
     ),
   ],
 } satisfies Meta<typeof Hub>;
