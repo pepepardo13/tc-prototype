@@ -110,6 +110,21 @@
   }
 }
 
+.termsLink {
+  font-family: "PolySans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #191919;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-bottom: 32px;
+
+  &:hover {
+    color: #6bcc36;
+  }
+}
+
 .checkboxWrap {
   margin-bottom: 32px;
 }

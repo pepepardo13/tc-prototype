@@ -52,29 +52,28 @@ export function TermsGate({ onAccept, onBack }: TermsGateProps) {
           </button>
         )}
 
-        <h1 className={styles.title}>Updated Terms &amp; policies</h1>
+        <h1 className={styles.title}>Terms &amp; policies</h1>
 
         <p className={styles.body}>
-          We've recently updated our Terms &amp; policies.
-          <br />
-          Please review and accept the{" "}
-          <a
-            href="https://www.envato.com/terms-policies"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => {
-              e.preventDefault();
-              handleTermsClick();
-            }}
-          >
-            updated Terms &amp; policies
-          </a>{" "}
-          to continue using Envato.
+          Please review and agree to the terms and policies that apply to your use of Envato products.
         </p>
+
+        <a
+          href="https://www.envato.com/terms-policies"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.termsLink}
+          onClick={(e) => {
+            e.preventDefault();
+            handleTermsClick();
+          }}
+        >
+          View Terms &amp; policies
+        </a>
 
         <div className={styles.checkboxWrap}>
           <Checkbox
-            label="I agree to Envato's Terms & policies that apply to my use of Envato products"
+            label="I agree to Envato's terms and policies that apply to my use of Envato products."
             checked={agreed}
             onChange={(e) => setAgreed(e.currentTarget.checked)}
           />
@@ -86,7 +85,7 @@ export function TermsGate({ onAccept, onBack }: TermsGateProps) {
           disabled={!agreed}
           onClick={onAccept}
         >
-          Accept &amp; continue
+          Agree &amp; continue
         </button>
       </main>
 
