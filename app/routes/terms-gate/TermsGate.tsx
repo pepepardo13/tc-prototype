@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 
+import { Checkbox } from "@envato/design-system/components";
+
 import styles from "./TermsGate.module.scss";
 
 import envatoMarkSrc from "../dashboard/assets/envato-mark-dark.svg";
@@ -9,14 +11,6 @@ function BackArrow() {
   return (
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#191919" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <polyline points="12 15 7 10 12 5" />
-    </svg>
-  );
-}
-
-function CheckIcon() {
-  return (
-    <svg className={styles.checkboxCheck} viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="2.5 7 5.5 10 11.5 4" />
     </svg>
   );
 }
@@ -78,19 +72,13 @@ export function TermsGate({ onAccept, onBack }: TermsGateProps) {
           to continue using Envato.
         </p>
 
-        <button
-          type="button"
-          className={styles.checkbox}
-          onClick={() => setAgreed((v) => !v)}
-        >
-          <span className={agreed ? styles.checkboxBoxChecked : styles.checkboxBox}>
-            {agreed && <CheckIcon />}
-          </span>
-          <span className={styles.checkboxLabel}>
-            I agree to Envato's Terms &amp; policies that apply to my use of
-            Envato products
-          </span>
-        </button>
+        <div className={styles.checkboxWrap}>
+          <Checkbox
+            label="I agree to Envato's Terms & policies that apply to my use of Envato products"
+            checked={agreed}
+            onChange={(e) => setAgreed(e.currentTarget.checked)}
+          />
+        </div>
 
         <button
           type="button"

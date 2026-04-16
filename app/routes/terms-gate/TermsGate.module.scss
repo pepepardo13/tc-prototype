@@ -110,47 +110,8 @@
   }
 }
 
-.checkbox {
-  all: unset;
-  box-sizing: border-box;
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  cursor: pointer;
+.checkboxWrap {
   margin-bottom: 32px;
-}
-
-.checkboxBox {
-  flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  border: 1.5px solid #d9d9d9;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: border-color 0.15s ease, background-color 0.15s ease;
-}
-
-.checkboxBoxChecked {
-  composes: checkboxBox;
-  background-color: #6bcc36;
-  border-color: #6bcc36;
-  color: white;
-}
-
-.checkboxCheck {
-  width: 14px;
-  height: 14px;
-}
-
-.checkboxLabel {
-  font-family: "PolySans", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #191919;
-  padding-top: 1px;
 }
 
 .submitButton {
