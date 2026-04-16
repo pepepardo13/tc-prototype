@@ -22,6 +22,7 @@ interface TermsGateProps {
 
 export function TermsGate({ onAccept, onBack }: TermsGateProps) {
   const [agreed, setAgreed] = useState(false);
+  const [optIn, setOptIn] = useState(true);
 
   const handleTermsClick = useCallback(() => {
     window.open("https://www.envato.com/terms-policies", "_blank");
@@ -76,6 +77,19 @@ export function TermsGate({ onAccept, onBack }: TermsGateProps) {
             label="I agree to Envato's terms and policies that apply to my use of Envato products."
             checked={agreed}
             onChange={(e) => setAgreed(e.currentTarget.checked)}
+          />
+        </div>
+
+        <div className={styles.checkboxWrap}>
+          <Checkbox
+            label={
+              <>
+                <strong>Yes to creative inspo in your inbox.</strong>{" "}
+                Fresh tutorials, trends, tools (and no boring bits).
+              </>
+            }
+            checked={optIn}
+            onChange={(e) => setOptIn(e.currentTarget.checked)}
           />
         </div>
 
