@@ -56,21 +56,19 @@ export function TermsGate({ onAccept, onBack }: TermsGateProps) {
         <h1 className={styles.title}>Terms &amp; policies</h1>
 
         <p className={styles.body}>
-          Please review and agree to the terms and policies that apply to your use of Envato products.
+          Please review and agree to the terms and policies that apply to your use of Envato products.{" "}
+          <a
+            href="https://www.envato.com/terms-policies"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => {
+              e.preventDefault();
+              handleTermsClick();
+            }}
+          >
+            View Terms &amp; policies
+          </a>
         </p>
-
-        <a
-          href="https://www.envato.com/terms-policies"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.termsLink}
-          onClick={(e) => {
-            e.preventDefault();
-            handleTermsClick();
-          }}
-        >
-          View Terms &amp; policies
-        </a>
 
         <div className={styles.checkboxWrap}>
           <Checkbox
