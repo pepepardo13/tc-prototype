@@ -3,10 +3,11 @@ import { useCallback, useEffect, useState } from "react";
 import { Dashboard } from "../dashboard/Dashboard.tsx";
 import { SignIn } from "../sign-in/SignIn.tsx";
 import { SignUp } from "../sign-up/SignUp.tsx";
+import { TermsGate } from "../terms-gate/TermsGate.tsx";
 
 import styles from "./Hub.module.scss";
 
-type Screen = "hub" | "sign-up" | "sign-in" | "dashboard";
+type Screen = "hub" | "sign-up" | "sign-in" | "terms-gate" | "dashboard";
 
 interface CategoryCardProps {
   title: string;
@@ -44,17 +45,21 @@ export function Hub() {
     return <Dashboard />;
   }
 
+  if (screen === "terms-gate") {
+    return <TermsGate onAccept={() => setScreen("dashboard")} />;
+  }
+
   if (screen === "sign-in") {
     return (
       <SignIn
-        onSignIn={() => setScreen("dashboard")}
+        onSignIn={() => setScreen("terms-gate")}
         onCreateAccount={() => setScreen("sign-up")}
       />
     );
   }
 
   if (screen === "sign-up") {
-    return <SignUp onSignIn={goHome} onComplete={() => setScreen("dashboard")} />;
+    return <SignUp onSignIn={goHome} onComplete={() => setScreen("terms-gate")} />;
   }
 
   return (

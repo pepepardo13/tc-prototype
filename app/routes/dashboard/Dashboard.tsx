@@ -1,5 +1,3 @@
-import { useCallback, useEffect, useState } from "react";
-
 import styles from "./Dashboard.module.scss";
 
 import envatoMarkSrc from "./assets/envato-mark-dark.svg";
@@ -99,91 +97,9 @@ function SectionHeader({
   );
 }
 
-function CheckIcon() {
-  return (
-    <svg className={styles.checkboxCheck} viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="2.5 7 5.5 10 11.5 4" />
-    </svg>
-  );
-}
-
-function TermsModal({ onAccept }: { onAccept: () => void }) {
-  const [agreed, setAgreed] = useState(false);
-
-  const handleTermsClick = useCallback(() => {
-    window.open("https://www.envato.com/terms-policies", "_blank");
-  }, []);
-
-  useEffect(() => {
-    function onFocus() {
-      setAgreed(true);
-    }
-    window.addEventListener("focus", onFocus);
-    return () => window.removeEventListener("focus", onFocus);
-  }, []);
-
-  return (
-    <div className={styles.modalOverlay}>
-      <div className={styles.modal}>
-        <div className={styles.modalHeader}>
-          <h2 className={styles.modalTitle}>Updated Terms &amp; policies</h2>
-        </div>
-
-        <div className={styles.modalContent}>
-          <p className={styles.modalBody}>
-            We've recently updated our Terms &amp; policies.
-            <br />
-            Please review and accept the{" "}
-            <a
-              href="https://www.envato.com/terms-policies"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => {
-                e.preventDefault();
-                handleTermsClick();
-              }}
-            >
-              updated Terms &amp; policies
-            </a>{" "}
-            to continue using Envato.
-          </p>
-
-          <button
-            type="button"
-            className={styles.modalCheckbox}
-            onClick={() => setAgreed((v) => !v)}
-          >
-            <span className={agreed ? styles.checkboxBoxChecked : styles.checkboxBox}>
-              {agreed && <CheckIcon />}
-            </span>
-            <span className={styles.checkboxLabel}>
-              I agree to Envato's Terms &amp; policies that apply to my use of
-              Envato products
-            </span>
-          </button>
-        </div>
-
-        <div className={styles.modalFooter}>
-          <button
-            type="button"
-            className={styles.modalSaveButton}
-            disabled={!agreed}
-            onClick={onAccept}
-          >
-            Accept &amp; continue
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export function Dashboard() {
-  const [showModal, setShowModal] = useState(true);
-
   return (
     <div className={styles.page}>
-      {showModal && <TermsModal onAccept={() => setShowModal(false)} />}
       {/* Site header */}
       <header className={styles.siteHeader}>
         <nav className={styles.navBar}>
