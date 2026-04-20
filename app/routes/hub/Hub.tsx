@@ -1,13 +1,14 @@
 import { useCallback, useEffect, useState } from "react";
 
 import { Dashboard } from "../dashboard/Dashboard.tsx";
+import { ExploreStock } from "../explore-stock/ExploreStock.tsx";
 import { SignIn } from "../sign-in/SignIn.tsx";
 import { SignUp } from "../sign-up/SignUp.tsx";
 import { TermsGate } from "../terms-gate/TermsGate.tsx";
 
 import styles from "./Hub.module.scss";
 
-type Screen = "hub" | "sign-up" | "sign-in" | "terms-gate" | "dashboard";
+type Screen = "hub" | "sign-up" | "sign-in" | "terms-gate" | "terms-gate-uj3" | "explore-stock" | "dashboard";
 
 interface CategoryCardProps {
   title: string;
@@ -41,8 +42,16 @@ export function Hub() {
     return () => window.removeEventListener("keydown", handleKey);
   }, []);
 
+  if (screen === "explore-stock") {
+    return <ExploreStock />;
+  }
+
   if (screen === "dashboard") {
     return <Dashboard />;
+  }
+
+  if (screen === "terms-gate-uj3") {
+    return <TermsGate onAccept={() => setScreen("explore-stock")} />;
   }
 
   if (screen === "terms-gate") {
@@ -83,7 +92,7 @@ export function Hub() {
         <CategoryCard
           title="User is a subscriber"
           subtitle="User Journey 3"
-          onClick={() => setScreen("terms-gate")}
+          onClick={() => setScreen("terms-gate-uj3")}
         />
       </div>
 
