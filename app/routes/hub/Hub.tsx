@@ -80,6 +80,11 @@ export function Hub() {
           subtitle="User Journey 2"
           onClick={() => setScreen("sign-in")}
         />
+        <CategoryCard
+          title="User is a subscriber"
+          subtitle="User Journey 3"
+          onClick={() => setScreen("terms-gate")}
+        />
       </div>
 
       <p className={styles.hint}>
